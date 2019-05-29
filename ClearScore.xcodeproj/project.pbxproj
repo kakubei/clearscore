@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		CAF90183229EDAE700B9B847 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF90182229EDAE700B9B847 /* AppDelegate.swift */; };
-		CAF90185229EDAE700B9B847 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF90184229EDAE700B9B847 /* ViewController.swift */; };
 		CAF90188229EDAE700B9B847 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAF90186229EDAE700B9B847 /* Main.storyboard */; };
 		CAF9018A229EDAE900B9B847 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAF90189229EDAE900B9B847 /* Assets.xcassets */; };
 		CAF9018D229EDAE900B9B847 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAF9018B229EDAE900B9B847 /* LaunchScreen.storyboard */; };
@@ -28,6 +27,9 @@
 		CAF901C0229EF00E00B9B847 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF901BF229EF00E00B9B847 /* Alamofire.framework */; };
 		CAF901C1229EF02C00B9B847 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF901BF229EF00E00B9B847 /* Alamofire.framework */; };
 		CAF901C3229EF12A00B9B847 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF901C2229EF12A00B9B847 /* Result.framework */; };
+		CAF901C5229F009500B9B847 /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF901C4229F009500B9B847 /* ScoreViewController.swift */; };
+		CAF901C7229F00D200B9B847 /* ScoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF901C6229F00D200B9B847 /* ScoreViewModel.swift */; };
+		CAF901C8229F00D200B9B847 /* ScoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF901C6229F00D200B9B847 /* ScoreViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +45,6 @@
 /* Begin PBXFileReference section */
 		CAF9017F229EDAE700B9B847 /* ClearScore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClearScore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAF90182229EDAE700B9B847 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CAF90184229EDAE700B9B847 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CAF90187229EDAE700B9B847 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CAF90189229EDAE900B9B847 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CAF9018C229EDAE900B9B847 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -63,6 +64,8 @@
 		CAF901BC229EED9C00B9B847 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
 		CAF901BF229EF00E00B9B847 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		CAF901C2229EF12A00B9B847 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		CAF901C4229F009500B9B847 /* ScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
+		CAF901C6229F00D200B9B847 /* ScoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +159,7 @@
 				CAF901B3229EE32600B9B847 /* CreditScoreAPI.swift */,
 				CAF901B6229EE70700B9B847 /* CreditScore.swift */,
 				CAF901B9229EEA0C00B9B847 /* RequestManager.swift */,
+				CAF901C6229F00D200B9B847 /* ScoreViewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -163,7 +167,7 @@
 		CAF901B2229EE2AE00B9B847 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				CAF90184229EDAE700B9B847 /* ViewController.swift */,
+				CAF901C4229F009500B9B847 /* ScoreViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -302,8 +306,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAF901BA229EEA0C00B9B847 /* RequestManager.swift in Sources */,
-				CAF90185229EDAE700B9B847 /* ViewController.swift in Sources */,
 				CAF901B4229EE32600B9B847 /* CreditScoreAPI.swift in Sources */,
+				CAF901C5229F009500B9B847 /* ScoreViewController.swift in Sources */,
+				CAF901C7229F00D200B9B847 /* ScoreViewModel.swift in Sources */,
 				CAF90183229EDAE700B9B847 /* AppDelegate.swift in Sources */,
 				CAF901B7229EE70700B9B847 /* CreditScore.swift in Sources */,
 			);
@@ -314,6 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAF901BB229EEA0C00B9B847 /* RequestManager.swift in Sources */,
+				CAF901C8229F00D200B9B847 /* ScoreViewModel.swift in Sources */,
 				CAF90198229EDAE900B9B847 /* ClearScoreTests.swift in Sources */,
 				CAF901B8229EE70700B9B847 /* CreditScore.swift in Sources */,
 				CAF901BD229EED9C00B9B847 /* Mocks.swift in Sources */,

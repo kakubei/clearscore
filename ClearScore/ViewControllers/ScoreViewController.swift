@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ScoreViewController.swift
 //  ClearScore
 //
 //  Created by Alex Dearden on 29/05/2019.
@@ -8,13 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ScoreViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+
     }
 
-
 }
-

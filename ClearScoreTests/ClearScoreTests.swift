@@ -19,17 +19,13 @@ class ClearScoreTests: XCTestCase {
         
     }
 
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
     func testJSONDecodeFromSample() {
         let stubbingProvider = MoyaProvider<CreditScoreAPI>(stubClosure: MoyaProvider.immediatelyStub)
         stubbingProvider.request(.getScore) { result in
             switch result {
             case let .success(response):
                 XCTAssertNotNil(response.data)
-                let jsonRoot = try! self.scoreDecoder.jsonDecoder.decode(CreditScoreRoot.self, from: response.data)                
+                let jsonRoot = try! self.scoreDecoder.jsonDecoder.decode(CreditScoreRoot.self, from: response.data)
                 XCTAssertNotNil(jsonRoot)
                 
                 let creditScore = jsonRoot.creditReportInfo

@@ -17,7 +17,17 @@
 		CAF901AA229EDF8600B9B847 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF901A5229EDF8600B9B847 /* Moya.framework */; };
 		CAF901AB229EDF8600B9B847 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF901A6229EDF8600B9B847 /* RxSwift.framework */; };
 		CAF901AC229EDF8600B9B847 /* RxGesture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF901A7229EDF8600B9B847 /* RxGesture.framework */; };
-		CAF901AE229EE14D00B9B847 /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF901A3229EDF8600B9B847 /* RxTest.framework */; };
+		CAF901B4229EE32600B9B847 /* CreditScoreAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF901B3229EE32600B9B847 /* CreditScoreAPI.swift */; };
+		CAF901B5229EE65B00B9B847 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF901A5229EDF8600B9B847 /* Moya.framework */; };
+		CAF901B7229EE70700B9B847 /* CreditScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF901B6229EE70700B9B847 /* CreditScore.swift */; };
+		CAF901B8229EE70700B9B847 /* CreditScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF901B6229EE70700B9B847 /* CreditScore.swift */; };
+		CAF901BA229EEA0C00B9B847 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF901B9229EEA0C00B9B847 /* RequestManager.swift */; };
+		CAF901BB229EEA0C00B9B847 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF901B9229EEA0C00B9B847 /* RequestManager.swift */; };
+		CAF901BD229EED9C00B9B847 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF901BC229EED9C00B9B847 /* Mocks.swift */; };
+		CAF901BE229EEDEE00B9B847 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF901A6229EDF8600B9B847 /* RxSwift.framework */; };
+		CAF901C0229EF00E00B9B847 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF901BF229EF00E00B9B847 /* Alamofire.framework */; };
+		CAF901C1229EF02C00B9B847 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF901BF229EF00E00B9B847 /* Alamofire.framework */; };
+		CAF901C3229EF12A00B9B847 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF901C2229EF12A00B9B847 /* Result.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +56,13 @@
 		CAF901A5229EDF8600B9B847 /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya.framework; path = Carthage/Build/iOS/Moya.framework; sourceTree = "<group>"; };
 		CAF901A6229EDF8600B9B847 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		CAF901A7229EDF8600B9B847 /* RxGesture.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxGesture.framework; path = Carthage/Build/iOS/RxGesture.framework; sourceTree = "<group>"; };
+		CAF901AF229EE29900B9B847 /* RxMoya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxMoya.framework; path = Carthage/Build/iOS/RxMoya.framework; sourceTree = "<group>"; };
+		CAF901B3229EE32600B9B847 /* CreditScoreAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditScoreAPI.swift; sourceTree = "<group>"; };
+		CAF901B6229EE70700B9B847 /* CreditScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditScore.swift; sourceTree = "<group>"; };
+		CAF901B9229EEA0C00B9B847 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		CAF901BC229EED9C00B9B847 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
+		CAF901BF229EF00E00B9B847 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		CAF901C2229EF12A00B9B847 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +72,8 @@
 			files = (
 				CAF901A9229EDF8600B9B847 /* RxCocoa.framework in Frameworks */,
 				CAF901AA229EDF8600B9B847 /* Moya.framework in Frameworks */,
+				CAF901C3229EF12A00B9B847 /* Result.framework in Frameworks */,
+				CAF901C0229EF00E00B9B847 /* Alamofire.framework in Frameworks */,
 				CAF901AB229EDF8600B9B847 /* RxSwift.framework in Frameworks */,
 				CAF901AC229EDF8600B9B847 /* RxGesture.framework in Frameworks */,
 			);
@@ -64,7 +83,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAF901AE229EE14D00B9B847 /* RxTest.framework in Frameworks */,
+				CAF901B5229EE65B00B9B847 /* Moya.framework in Frameworks */,
+				CAF901C1229EF02C00B9B847 /* Alamofire.framework in Frameworks */,
+				CAF901BE229EEDEE00B9B847 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,8 +114,9 @@
 		CAF90181229EDAE700B9B847 /* ClearScore */ = {
 			isa = PBXGroup;
 			children = (
+				CAF901B2229EE2AE00B9B847 /* ViewControllers */,
+				CAF901B1229EE2A500B9B847 /* Models */,
 				CAF90182229EDAE700B9B847 /* AppDelegate.swift */,
-				CAF90184229EDAE700B9B847 /* ViewController.swift */,
 				CAF90186229EDAE700B9B847 /* Main.storyboard */,
 				CAF90189229EDAE900B9B847 /* Assets.xcassets */,
 				CAF9018B229EDAE900B9B847 /* LaunchScreen.storyboard */,
@@ -108,6 +130,7 @@
 			children = (
 				CAF90197229EDAE900B9B847 /* ClearScoreTests.swift */,
 				CAF90199229EDAE900B9B847 /* Info.plist */,
+				CAF901BC229EED9C00B9B847 /* Mocks.swift */,
 			);
 			path = ClearScoreTests;
 			sourceTree = "<group>";
@@ -115,6 +138,9 @@
 		CAF901A2229EDF8600B9B847 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CAF901C2229EF12A00B9B847 /* Result.framework */,
+				CAF901BF229EF00E00B9B847 /* Alamofire.framework */,
+				CAF901AF229EE29900B9B847 /* RxMoya.framework */,
 				CAF901A5229EDF8600B9B847 /* Moya.framework */,
 				CAF901A4229EDF8600B9B847 /* RxCocoa.framework */,
 				CAF901A7229EDF8600B9B847 /* RxGesture.framework */,
@@ -122,6 +148,24 @@
 				CAF901A3229EDF8600B9B847 /* RxTest.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CAF901B1229EE2A500B9B847 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CAF901B3229EE32600B9B847 /* CreditScoreAPI.swift */,
+				CAF901B6229EE70700B9B847 /* CreditScore.swift */,
+				CAF901B9229EEA0C00B9B847 /* RequestManager.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CAF901B2229EE2AE00B9B847 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CAF90184229EDAE700B9B847 /* ViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +278,8 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxGesture.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -242,6 +288,7 @@
 				"$(DERIVED_FILE_DIR)/RxCocoa.framework",
 				"$(DERIVED_FILE_DIR)/RxGesture.framework",
 				"$(DERIVED_FILE_DIR)/RxSwift.framework",
+				"$(DERIVED_FILE_DIR)/Alamofire.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -254,8 +301,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAF901BA229EEA0C00B9B847 /* RequestManager.swift in Sources */,
 				CAF90185229EDAE700B9B847 /* ViewController.swift in Sources */,
+				CAF901B4229EE32600B9B847 /* CreditScoreAPI.swift in Sources */,
 				CAF90183229EDAE700B9B847 /* AppDelegate.swift in Sources */,
+				CAF901B7229EE70700B9B847 /* CreditScore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,7 +313,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAF901BB229EEA0C00B9B847 /* RequestManager.swift in Sources */,
 				CAF90198229EDAE900B9B847 /* ClearScoreTests.swift in Sources */,
+				CAF901B8229EE70700B9B847 /* CreditScore.swift in Sources */,
+				CAF901BD229EED9C00B9B847 /* Mocks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,27 +7,38 @@
 //
 
 import XCTest
+import Moya
 @testable import ClearScore
 
 class ClearScoreTests: XCTestCase {
+    
+    var requestManager: RequestManaging?
+    var scoreDecoder: ScoreDecoding = ScoreDecoder()
 
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        
     }
 
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
+    func testJSONDecodeFromSample() {
+        let stubbingProvider = MoyaProvider<CreditScoreAPI>(stubClosure: MoyaProvider.immediatelyStub)
+        stubbingProvider.request(.getScore) { result in
+            switch result {
+            case let .success(response):
+                XCTAssertNotNil(response.data)
+                let jsonRoot = try! self.scoreDecoder.jsonDecoder.decode(CreditScoreRoot.self, from: response.data)                
+                XCTAssertNotNil(jsonRoot)
+                
+                let creditScore = jsonRoot.creditReportInfo
+                XCTAssertNotNil(creditScore)
 
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+            case let .failure(error):
+                debugPrint("Error getting credit report:", error.localizedDescription)
+                XCTFail("Unable to decode CreditScore")
+            }
         }
     }
 

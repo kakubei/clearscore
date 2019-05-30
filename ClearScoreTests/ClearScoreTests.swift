@@ -25,10 +25,8 @@ class ClearScoreTests: XCTestCase {
             switch result {
             case let .success(response):
                 XCTAssertNotNil(response.data)
-                let jsonRoot = try! self.scoreDecoder.jsonDecoder.decode(CreditScoreRoot.self, from: response.data)
-                XCTAssertNotNil(jsonRoot)
+                let creditScore = try! self.scoreDecoder.decode(response)
                 
-                let creditScore = jsonRoot.creditReportInfo
                 XCTAssertNotNil(creditScore)
 
             case let .failure(error):

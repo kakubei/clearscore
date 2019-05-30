@@ -16,25 +16,12 @@ public enum APIError: Error {
 }
 
 protocol RequestManaging {
-    func scoreDecoder(_ response: Response) throws -> CreditScore
     func fetchScore() -> Maybe<CreditScore>
 }
 
-protocol ScoreDecoding {
-    var jsonDecoder: JSONDecoder { get }
-}
-
-// A separate type so we can use it in tests also
-// And if it ever changes (Swift 4 for example) we can easily change just this object
-struct ScoreDecoder: ScoreDecoding {
-    let jsonDecoder: JSONDecoder = {
-        let jsonDecoder = JSONDecoder()
-        jsonDecoder.dateDecodingStrategy = .secondsSince1970
-        return jsonDecoder
-    }()
-}
-
 struct RequestManager: RequestManaging {
+    
+    private let scoreDecoder: ScoreDecoding = ScoreDecoder()
     
     public func fetchScore() -> Maybe<CreditScore> {
         let provider = MoyaProvider<CreditScoreAPI>()
@@ -45,7 +32,7 @@ struct RequestManager: RequestManaging {
                 switch result {
                 case let .success(response):
                     do {
-                        let creditScore = try self.scoreDecoder(response)
+                        let creditScore = try self.scoreDecoder.decode(response)
                         maybe(.success(creditScore))
                     } catch {
                         maybe(.error(APIError.decodeError))
@@ -58,18 +45,6 @@ struct RequestManager: RequestManaging {
             }
             
             return Disposables.create()
-        }
-    }
-    
-    internal func scoreDecoder(_ response: Response) throws -> CreditScore {
-        let scoreDecoder: ScoreDecoding = ScoreDecoder()
-        
-        do {
-            let values = try scoreDecoder.jsonDecoder.decode(CreditScoreRoot.self, from: response.data)
-            let creditScore = values.creditReportInfo
-            return creditScore
-        } catch {
-            throw(APIError.decodeError)
         }
     }
     

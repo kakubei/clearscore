@@ -10,12 +10,35 @@ import Foundation
 import RxSwift
 
 protocol ScoreViewModeling {
-    var scorePercentage: Double? { get set }
-    func fetchScores() -> CreditScore
+    var scorePercentage: PublishSubject<Double> { get set }
+    var creditScore: PublishSubject<CreditScore> { get }
+    var apiError: PublishSubject<Error> { get }
+    
+    func fetchScores()
 }
 
-struct ScoreViewModel {
-    let requestManager: RequestManaging = RequestManager()
+struct ScoreViewModel: ScoreViewModeling {
+    var scorePercentage = PublishSubject<Double>()
+    var creditScore = PublishSubject<CreditScore>()
+    var apiError = PublishSubject<Error>()
     
+    private let requestManager: RequestManaging = RequestManager()
+    private let disposeBag = DisposeBag()
     
+    func fetchScores() {
+        requestManager.fetchScore()
+            .subscribe { result in
+                switch result {
+                case .success(let score):
+                    self.creditScore.onNext(score)
+                case .error(let error):
+                    self.apiError.onNext(error)
+                case .completed:
+                    debugPrint("Nothing to show 😿")
+                }
+            }
+        
+        .disposed(by: disposeBag)
+    }
+
 }

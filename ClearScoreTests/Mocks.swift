@@ -9,3 +9,19 @@
 import Foundation
 import RxSwift
 
+struct MockScoreViewModel: ScoreViewModeling {
+    var scorePercentage = PublishSubject<Int>()
+    var creditScore = PublishSubject<String>()
+    var maxScore = PublishSubject<String>()
+    var apiError = PublishSubject<Error>()
+    
+    func fetchScores() {
+        let creditScoreObject = CreditScore(score: 325, clientRef: "123", maxScoreValue: 700, minScoreValue: 0)
+        
+        creditScore.onNext(creditScoreObject.score.description)
+        maxScore.onNext(creditScoreObject.maxScoreValue.description)
+        scorePercentage.onNext(50)
+    }
+    
+    
+}

@@ -35,6 +35,7 @@
 		CAF901CD229F208600B9B847 /* CreditScoreAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF901B3229EE32600B9B847 /* CreditScoreAPI.swift */; };
 		CAF901D0229FEFE400B9B847 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF901CF229FEFE400B9B847 /* Extensions.swift */; };
 		CAF901D222A1255E00B9B847 /* CircularView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF901D122A1255E00B9B847 /* CircularView.swift */; };
+		CAF901D322A1330C00B9B847 /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF901A3229EDF8600B9B847 /* RxTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 				CAF901B5229EE65B00B9B847 /* Moya.framework in Frameworks */,
 				CAF901C1229EF02C00B9B847 /* Alamofire.framework in Frameworks */,
 				CAF901BE229EEDEE00B9B847 /* RxSwift.framework in Frameworks */,
+				CAF901D322A1330C00B9B847 /* RxTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +305,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxTest.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -312,6 +315,7 @@
 				"$(DERIVED_FILE_DIR)/RxGesture.framework",
 				"$(DERIVED_FILE_DIR)/RxSwift.framework",
 				"$(DERIVED_FILE_DIR)/Alamofire.framework",
+				"$(DERIVED_FILE_DIR)/RxTest.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

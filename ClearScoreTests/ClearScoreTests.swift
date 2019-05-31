@@ -8,16 +8,17 @@
 
 import XCTest
 import Moya
+import RxTest
+import RxSwift
 @testable import ClearScore
 
 class ClearScoreTests: XCTestCase {
     
     var requestManager: RequestManaging?
     var scoreDecoder: ScoreDecoding = ScoreDecoder()
-
-    override func setUp() {
-        
-    }
+    let viewModel: ScoreViewModeling = MockScoreViewModel()
+    
+    let disposeBag = DisposeBag()
 
     func testJSONDecodeFromSample() {
         let stubbingProvider = MoyaProvider<CreditScoreAPI>(stubClosure: MoyaProvider.immediatelyStub)
@@ -36,4 +37,42 @@ class ClearScoreTests: XCTestCase {
         }
     }
 
+    func testScoreObservable() {
+        let testScheduler = TestScheduler(initialClock: 0)
+        let scoreObserver = testScheduler.createObserver(String.self)
+        viewModel.creditScore.subscribe(scoreObserver).disposed(by: disposeBag)
+        
+        testScheduler.start()
+        viewModel.fetchScores()
+        
+        let score = scoreObserver.events.first?.value.element
+        XCTAssertNotNil(score)
+        XCTAssertEqual(score!, "325")
+    }
+    
+    func testMaxScoreObservable() {
+        let testScheduler = TestScheduler(initialClock: 0)
+        let maxScoreObserver = testScheduler.createObserver(String.self)
+        viewModel.maxScore.subscribe(maxScoreObserver).disposed(by: disposeBag)
+        
+        testScheduler.start()
+        viewModel.fetchScores()
+        
+        let maxScore = maxScoreObserver.events.first?.value.element
+        XCTAssertNotNil(maxScore)
+        XCTAssertEqual(maxScore!, "700")
+    }
+    
+    func testPercentageObservable() {
+        let testScheduler = TestScheduler(initialClock: 0)
+        let percentageObserver = testScheduler.createObserver(Int.self)
+        viewModel.scorePercentage.subscribe(percentageObserver).disposed(by: disposeBag)
+        
+        testScheduler.start()
+        viewModel.fetchScores()
+        
+        let percentage = percentageObserver.events.first?.value.element
+        XCTAssertNotNil(percentage)
+        XCTAssertEqual(percentage!, 50)
+    }
 }

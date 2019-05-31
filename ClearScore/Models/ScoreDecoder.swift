@@ -10,12 +10,10 @@ import Foundation
 import Moya
 
 protocol ScoreDecoding {
-    func decode(_ response: Response) throws -> CreditScore
-    //    var jsonDecoder: JSONDecoder { get }
+    func decode(_ response: Response) throws -> CreditScore    
 }
 
-// A separate type so we can use it in tests also
-// And if it ever changes (Swift 4 for example) we can easily change just this object
+// If the decoder ever changes (Swift 4 for example) we can easily change just this object
 struct ScoreDecoder: ScoreDecoding {
     
     let jsonDecoder: JSONDecoder = {

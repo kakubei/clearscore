@@ -34,6 +34,7 @@
 		CAF901CC229F206E00B9B847 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF901B9229EEA0C00B9B847 /* RequestManager.swift */; };
 		CAF901CD229F208600B9B847 /* CreditScoreAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF901B3229EE32600B9B847 /* CreditScoreAPI.swift */; };
 		CAF901D0229FEFE400B9B847 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF901CF229FEFE400B9B847 /* Extensions.swift */; };
+		CAF901D222A1255E00B9B847 /* CircularView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF901D122A1255E00B9B847 /* CircularView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		CAF901C6229F00D200B9B847 /* ScoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewModel.swift; sourceTree = "<group>"; };
 		CAF901C9229F1F5500B9B847 /* ScoreDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreDecoder.swift; sourceTree = "<group>"; };
 		CAF901CF229FEFE400B9B847 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		CAF901D122A1255E00B9B847 /* CircularView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				CAF901CF229FEFE400B9B847 /* Extensions.swift */,
+				CAF901D122A1255E00B9B847 /* CircularView.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAF901D222A1255E00B9B847 /* CircularView.swift in Sources */,
 				CAF901BA229EEA0C00B9B847 /* RequestManager.swift in Sources */,
 				CAF901B4229EE32600B9B847 /* CreditScoreAPI.swift in Sources */,
 				CAF901C5229F009500B9B847 /* ScoreViewController.swift in Sources */,

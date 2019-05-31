@@ -8,8 +8,12 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 
 class ScoreViewController: UIViewController {
+    
+    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var outOfLabel: UILabel!
     
     private let viewModel: ScoreViewModeling = ScoreViewModel()
     private let disposeBag = DisposeBag()
@@ -21,11 +25,14 @@ class ScoreViewController: UIViewController {
     }
     
     private func setupObservers() {
-        viewModel.creditScore.asObservable()
-            .subscribe(onNext: { [weak self] score in
-                self?.showScore(score)
-            }).disposed(by: disposeBag)
+        viewModel.creditScore.asDriver(onErrorJustReturn: "")
+            .drive(scoreLabel.rx.text)
+            .disposed(by: disposeBag)
         
+        viewModel.maxScore.asDriver(onErrorJustReturn: "")
+            .drive(outOfLabel.rx.text)
+            .disposed(by: disposeBag)
+
         viewModel.apiError.asObservable()
             .subscribe(onNext: { [weak self] error in
                 self?.alert(title: "Error", message: error.localizedDescription)
@@ -33,7 +40,7 @@ class ScoreViewController: UIViewController {
     }
 
     // WARNING: Requires implementation
-    private func showScore(_ score: CreditScore) {
+    private func showScorePercentage(_ percentage: Int) {
         
     }
     

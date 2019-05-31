@@ -16,31 +16,31 @@ public enum APIError: Error {
 }
 
 protocol RequestManaging {
-    func fetchScore() -> Maybe<CreditScore>
+    func fetchScore() -> Single<CreditScore>
 }
 
 struct RequestManager: RequestManaging {
     
     private let scoreDecoder: ScoreDecoding = ScoreDecoder()
     
-    public func fetchScore() -> Maybe<CreditScore> {
+    public func fetchScore() -> Single<CreditScore> {
         let provider = MoyaProvider<CreditScoreAPI>()
         
-        return Maybe.create { maybe in
+        return Single.create { single in
             
             provider.request(.getScore) { result in
                 switch result {
                 case let .success(response):
                     do {
                         let creditScore = try self.scoreDecoder.decode(response)
-                        maybe(.success(creditScore))
+                        single(.success(creditScore))
                     } catch {
-                        maybe(.error(APIError.decodeError))
+                        single(.error(APIError.decodeError))
                     }
                     
                 case let .failure(error):
                     debugPrint("### Error from RequestManager:", error)
-                    maybe(.error(error))
+                    single(.error(error))
                 }
             }
             

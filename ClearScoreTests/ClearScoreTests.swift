@@ -75,4 +75,19 @@ class ClearScoreTests: XCTestCase {
         XCTAssertNotNil(percentage)
         XCTAssertEqual(percentage!, 50)
     }
+    
+    func testApiErrorObservable() {
+        let testScheduler = TestScheduler(initialClock: 0)
+        let errorObserver = testScheduler.createObserver(Error.self)
+        viewModel.apiError.subscribe(errorObserver).disposed(by: disposeBag)
+        
+        testScheduler.start()
+        viewModel.fetchScores()
+        
+        let error = errorObserver.events.first?.value.element
+        XCTAssertNotNil(error)
+        let apiError = error as? APIError
+        XCTAssertNotNil(apiError)
+        XCTAssertEqual(apiError!, APIError.apiError)
+    }
 }

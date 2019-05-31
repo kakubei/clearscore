@@ -21,6 +21,12 @@ struct MockScoreViewModel: ScoreViewModeling {
         creditScore.onNext(creditScoreObject.score.description)
         maxScore.onNext(creditScoreObject.maxScoreValue.description)
         scorePercentage.onNext(50)
+        
+        throwError()
+    }
+    
+    private func throwError() {
+        apiError.onNext(APIError.apiError)
     }
     
     

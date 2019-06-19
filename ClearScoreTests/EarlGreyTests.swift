@@ -15,5 +15,20 @@ class EarlGreyTests: XCTestCase {
         EarlGrey.selectElement(with: grey_keyWindow())
             .assert(grey_sufficientlyVisible())
     }
+    
+    func testTitleLabel() {
+        EarlGrey.selectElement(with: grey_accessibilityID("title"))
+            .assert(grey_text("Your credit score is"))
+    }
+    
+    func testScoreLabel() {
+        EarlGrey.selectElement(with: grey_accessibilityID("score"))
+            .assert(grey_notNil())
+    }
+    
+    func testTotalLabel() {
+        EarlGrey.selectElement(with: grey_accessibilityID("total"))
+            .assert(grey_text("out of 700"))
+    }
 
 }

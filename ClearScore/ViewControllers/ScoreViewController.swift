@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import RxGesture
 
 class ScoreViewController: UIViewController {
     
@@ -22,6 +23,7 @@ class ScoreViewController: UIViewController {
         super.viewDidLoad()
 
         setupObservers()
+        setupTapGesture()
     }
     
     private func setupObservers() {
@@ -37,6 +39,16 @@ class ScoreViewController: UIViewController {
             .subscribe(onNext: { [weak self] error in
                 self?.alert(title: "Error", message: error.localizedDescription)
             }).disposed(by: disposeBag)
+    }
+    
+    private func setupTapGesture() {
+        view.rx
+            .tapGesture()
+            .when(.recognized)
+            .subscribe(onNext: { _ in
+                
+            })
+            .disposed(by: disposeBag)
     }
 
 }

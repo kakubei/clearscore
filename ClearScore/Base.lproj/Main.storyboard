@@ -75,5 +75,82 @@
             </objects>
             <point key="canvasLocation" x="47.826086956521742" y="20.758928571428569"/>
         </scene>
+        <!--Details View Controller-->
+        <scene sceneID="hJj-HP-YSu">
+            <objects>
+                <viewController id="ems-p3-9zc" customClass="DetailsViewController" customModule="ClearScore" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="07T-kQ-rwE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="PFC-Lc-lcc">
+                                <rect key="frame" x="20" y="64" width="374" height="238"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cient Ref" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G0Y-qn-q8n">
+                                        <rect key="frame" x="0.0" y="0.0" width="70.5" height="20.5"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="clientRef"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HUP-Js-5l9">
+                                        <rect key="frame" x="0.0" y="43.5" width="42.5" height="20.5"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="score"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="max score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Egf-St-ARN">
+                                        <rect key="frame" x="0.0" y="87" width="79" height="20.5"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="maxScore"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="min score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ntk-KC-spY">
+                                        <rect key="frame" x="0.0" y="130.5" width="75" height="20.5"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="minScore"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="has defaulted" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ac-3d-l05">
+                                        <rect key="frame" x="0.0" y="174" width="104" height="20.5"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="hasDefaulted"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="has been delinquent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RIA-Fa-tkk">
+                                        <rect key="frame" x="0.0" y="217.5" width="155" height="20.5"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="beenDelinquent"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PFC-Lc-lcc" firstAttribute="leading" secondItem="Czn-6d-dn7" secondAttribute="leading" constant="20" id="7uX-Jv-vEg"/>
+                            <constraint firstItem="Czn-6d-dn7" firstAttribute="trailing" secondItem="PFC-Lc-lcc" secondAttribute="trailing" constant="20" id="AEl-mu-oBS"/>
+                            <constraint firstItem="PFC-Lc-lcc" firstAttribute="top" secondItem="Czn-6d-dn7" secondAttribute="top" constant="20" id="Qcb-HI-Xyk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Czn-6d-dn7"/>
+                    </view>
+                    <connections>
+                        <outlet property="beenDelinquentLabel" destination="RIA-Fa-tkk" id="KeC-ty-37e"/>
+                        <outlet property="clientRefLabel" destination="G0Y-qn-q8n" id="Vls-wQ-eN4"/>
+                        <outlet property="hasDefaultedLabel" destination="1ac-3d-l05" id="KZW-5o-cta"/>
+                        <outlet property="maxScoreLabel" destination="Egf-St-ARN" id="hXx-dN-LXc"/>
+                        <outlet property="minScoreLabel" destination="Ntk-KC-spY" id="6Jf-Rn-9bd"/>
+                        <outlet property="scoreLabel" destination="HUP-Js-5l9" id="VDq-xp-89L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nPP-8N-YJN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="851" y="21"/>
+        </scene>
     </scenes>
 </document>

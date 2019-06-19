@@ -11,6 +11,7 @@
 		CA9C5B9E22BA5864008DE957 /* EarlGreyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9C5B9D22BA5864008DE957 /* EarlGreyTests.swift */; };
 		CA9C5B9F22BA5A5C008DE957 /* EarlGrey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA9C5B9B22BA581B008DE957 /* EarlGrey.framework */; };
 		CA9C5BA122BA5BA9008DE957 /* EarlGrey.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9C5BA022BA5BA9008DE957 /* EarlGrey.swift */; };
+		CA9C5BA322BA63A7008DE957 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9C5BA222BA63A7008DE957 /* DetailsViewController.swift */; };
 		CAF90183229EDAE700B9B847 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF90182229EDAE700B9B847 /* AppDelegate.swift */; };
 		CAF90188229EDAE700B9B847 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAF90186229EDAE700B9B847 /* Main.storyboard */; };
 		CAF9018A229EDAE900B9B847 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAF90189229EDAE900B9B847 /* Assets.xcassets */; };
@@ -56,6 +57,7 @@
 		CA9C5B9B22BA581B008DE957 /* EarlGrey.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EarlGrey.framework; path = Carthage/Build/iOS/EarlGrey.framework; sourceTree = "<group>"; };
 		CA9C5B9D22BA5864008DE957 /* EarlGreyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarlGreyTests.swift; sourceTree = "<group>"; };
 		CA9C5BA022BA5BA9008DE957 /* EarlGrey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarlGrey.swift; sourceTree = "<group>"; };
+		CA9C5BA222BA63A7008DE957 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		CAF9017F229EDAE700B9B847 /* ClearScore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClearScore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAF90182229EDAE700B9B847 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAF90187229EDAE700B9B847 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				CAF901C4229F009500B9B847 /* ScoreViewController.swift */,
+				CA9C5BA222BA63A7008DE957 /* DetailsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				CAF901CA229F1F5500B9B847 /* ScoreDecoder.swift in Sources */,
 				CAF90183229EDAE700B9B847 /* AppDelegate.swift in Sources */,
 				CAF901B7229EE70700B9B847 /* CreditScore.swift in Sources */,
+				CA9C5BA322BA63A7008DE957 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

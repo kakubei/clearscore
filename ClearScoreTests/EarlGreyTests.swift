@@ -24,6 +24,7 @@ class EarlGreyTests: XCTestCase {
     func testScoreLabel() {
         EarlGrey.selectElement(with: grey_accessibilityID("score"))
             .assert(grey_notNil())
+            .assert(grey_not(grey_text("")))
     }
     
     func testTotalLabel() {

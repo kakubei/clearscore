@@ -17,4 +17,7 @@ struct CreditScore: Decodable {
     let clientRef: String
     let maxScoreValue: Int
     let minScoreValue: Int
+    let hasEverDefaulted: Bool
+    let hasEverBeenDelinquent: Bool
+    let percentageCreditUsed: Int
 }

@@ -39,11 +39,6 @@ class ScoreViewController: UIViewController {
             }).disposed(by: disposeBag)
     }
 
-    // WARNING: Requires implementation
-    private func showScorePercentage(_ percentage: Int) {
-        
-    }
-    
 }
 
 

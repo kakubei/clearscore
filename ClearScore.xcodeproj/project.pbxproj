@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA9C5B9C22BA581B008DE957 /* EarlGrey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA9C5B9B22BA581B008DE957 /* EarlGrey.framework */; };
+		CA9C5B9E22BA5864008DE957 /* EarlGreyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9C5B9D22BA5864008DE957 /* EarlGreyTests.swift */; };
+		CA9C5B9F22BA5A5C008DE957 /* EarlGrey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA9C5B9B22BA581B008DE957 /* EarlGrey.framework */; };
+		CA9C5BA122BA5BA9008DE957 /* EarlGrey.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9C5BA022BA5BA9008DE957 /* EarlGrey.swift */; };
 		CAF90183229EDAE700B9B847 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF90182229EDAE700B9B847 /* AppDelegate.swift */; };
 		CAF90188229EDAE700B9B847 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAF90186229EDAE700B9B847 /* Main.storyboard */; };
 		CAF9018A229EDAE900B9B847 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAF90189229EDAE900B9B847 /* Assets.xcassets */; };
@@ -49,6 +53,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CA9C5B9B22BA581B008DE957 /* EarlGrey.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EarlGrey.framework; path = Carthage/Build/iOS/EarlGrey.framework; sourceTree = "<group>"; };
+		CA9C5B9D22BA5864008DE957 /* EarlGreyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarlGreyTests.swift; sourceTree = "<group>"; };
+		CA9C5BA022BA5BA9008DE957 /* EarlGrey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarlGrey.swift; sourceTree = "<group>"; };
 		CAF9017F229EDAE700B9B847 /* ClearScore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClearScore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAF90182229EDAE700B9B847 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAF90187229EDAE700B9B847 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -82,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA9C5B9C22BA581B008DE957 /* EarlGrey.framework in Frameworks */,
 				CAF901A9229EDF8600B9B847 /* RxCocoa.framework in Frameworks */,
 				CAF901AA229EDF8600B9B847 /* Moya.framework in Frameworks */,
 				CAF901C3229EF12A00B9B847 /* Result.framework in Frameworks */,
@@ -99,6 +107,7 @@
 				CAF901C1229EF02C00B9B847 /* Alamofire.framework in Frameworks */,
 				CAF901BE229EEDEE00B9B847 /* RxSwift.framework in Frameworks */,
 				CAF901D322A1330C00B9B847 /* RxTest.framework in Frameworks */,
+				CA9C5B9F22BA5A5C008DE957 /* EarlGrey.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +154,7 @@
 				CAF90197229EDAE900B9B847 /* ClearScoreTests.swift */,
 				CAF90199229EDAE900B9B847 /* Info.plist */,
 				CAF901BC229EED9C00B9B847 /* Mocks.swift */,
+				CA9C5B9D22BA5864008DE957 /* EarlGreyTests.swift */,
 			);
 			path = ClearScoreTests;
 			sourceTree = "<group>";
@@ -152,6 +162,7 @@
 		CAF901A2229EDF8600B9B847 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CA9C5B9B22BA581B008DE957 /* EarlGrey.framework */,
 				CAF901C2229EF12A00B9B847 /* Result.framework */,
 				CAF901BF229EF00E00B9B847 /* Alamofire.framework */,
 				CAF901AF229EE29900B9B847 /* RxMoya.framework */,
@@ -189,6 +200,7 @@
 			children = (
 				CAF901CF229FEFE400B9B847 /* Extensions.swift */,
 				CAF901D122A1255E00B9B847 /* CircularView.swift */,
+				CA9C5BA022BA5BA9008DE957 /* EarlGrey.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -203,7 +215,7 @@
 				CAF9017B229EDAE700B9B847 /* Sources */,
 				CAF9017C229EDAE700B9B847 /* Frameworks */,
 				CAF9017D229EDAE700B9B847 /* Resources */,
-				CAF901AD229EDFAF00B9B847 /* ShellScript */,
+				CAF901AD229EDFAF00B9B847 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -291,7 +303,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		CAF901AD229EDFAF00B9B847 /* ShellScript */ = {
+		CAF901AD229EDFAF00B9B847 /* Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -306,7 +318,9 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxTest.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/EarlGrey.framework",
 			);
+			name = Carthage;
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -316,6 +330,7 @@
 				"$(DERIVED_FILE_DIR)/RxSwift.framework",
 				"$(DERIVED_FILE_DIR)/Alamofire.framework",
 				"$(DERIVED_FILE_DIR)/RxTest.framework",
+				"$(DERIVED_FILE_DIR)/EarlGrey.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -348,9 +363,11 @@
 				CAF90198229EDAE900B9B847 /* ClearScoreTests.swift in Sources */,
 				CAF901B8229EE70700B9B847 /* CreditScore.swift in Sources */,
 				CAF901CC229F206E00B9B847 /* RequestManager.swift in Sources */,
+				CA9C5B9E22BA5864008DE957 /* EarlGreyTests.swift in Sources */,
 				CAF901BD229EED9C00B9B847 /* Mocks.swift in Sources */,
 				CAF901CD229F208600B9B847 /* CreditScoreAPI.swift in Sources */,
 				CAF901CB229F1F5500B9B847 /* ScoreDecoder.swift in Sources */,
+				CA9C5BA122BA5BA9008DE957 /* EarlGrey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

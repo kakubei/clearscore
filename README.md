@@ -10,3 +10,7 @@ Right now, the transitions are too abrubt, not a good UX.
 
 ### Would have loved to have added the percentage bar with Core Graphics
 But didn't have time to do so
+
+### UI Tests
+I don't usually write UI tests, I've always had QA write automated UI tests with Apium, etc. 
+Xcode's UI Tests are not the greatest but I would have liked to have written some UI tests for this project.

@@ -12,6 +12,17 @@
 		CA9C5B9F22BA5A5C008DE957 /* EarlGrey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA9C5B9B22BA581B008DE957 /* EarlGrey.framework */; };
 		CA9C5BA122BA5BA9008DE957 /* EarlGrey.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9C5BA022BA5BA9008DE957 /* EarlGrey.swift */; };
 		CA9C5BA322BA63A7008DE957 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9C5BA222BA63A7008DE957 /* DetailsViewController.swift */; };
+		CA9C5BAD22BA684D008DE957 /* DetailsViewUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9C5BA622BA684D008DE957 /* DetailsViewUI.swift */; };
+		CA9C5BAE22BA684D008DE957 /* DetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9C5BA722BA684D008DE957 /* DetailsPresenter.swift */; };
+		CA9C5BAF22BA684D008DE957 /* DetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9C5BA822BA684D008DE957 /* DetailsRouter.swift */; };
+		CA9C5BB022BA684D008DE957 /* DetailsContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9C5BA922BA684D008DE957 /* DetailsContracts.swift */; };
+		CA9C5BB122BA684D008DE957 /* DetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9C5BAA22BA684D008DE957 /* DetailsInteractor.swift */; };
+		CA9C5BB222BA684D008DE957 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9C5BAB22BA684D008DE957 /* DetailsView.swift */; };
+		CA9C5BC022BA7104008DE957 /* DetailsContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9C5BBF22BA7104008DE957 /* DetailsContract.swift */; };
+		CA9C5BC222BA7111008DE957 /* DetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9C5BC122BA7111008DE957 /* DetailsPresenter.swift */; };
+		CA9C5BC422BA7119008DE957 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9C5BC322BA7119008DE957 /* DetailsViewController.swift */; };
+		CA9C5BC622BA7123008DE957 /* DetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9C5BC522BA7123008DE957 /* DetailsInteractor.swift */; };
+		CA9C5BC822BA7128008DE957 /* DetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9C5BC722BA7128008DE957 /* DetailsRouter.swift */; };
 		CAF90183229EDAE700B9B847 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF90182229EDAE700B9B847 /* AppDelegate.swift */; };
 		CAF90188229EDAE700B9B847 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAF90186229EDAE700B9B847 /* Main.storyboard */; };
 		CAF9018A229EDAE900B9B847 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAF90189229EDAE900B9B847 /* Assets.xcassets */; };
@@ -58,6 +69,17 @@
 		CA9C5B9D22BA5864008DE957 /* EarlGreyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarlGreyTests.swift; sourceTree = "<group>"; };
 		CA9C5BA022BA5BA9008DE957 /* EarlGrey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarlGrey.swift; sourceTree = "<group>"; };
 		CA9C5BA222BA63A7008DE957 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		CA9C5BA622BA684D008DE957 /* DetailsViewUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewUI.swift; sourceTree = "<group>"; };
+		CA9C5BA722BA684D008DE957 /* DetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPresenter.swift; sourceTree = "<group>"; };
+		CA9C5BA822BA684D008DE957 /* DetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsRouter.swift; sourceTree = "<group>"; };
+		CA9C5BA922BA684D008DE957 /* DetailsContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsContracts.swift; sourceTree = "<group>"; };
+		CA9C5BAA22BA684D008DE957 /* DetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsInteractor.swift; sourceTree = "<group>"; };
+		CA9C5BAB22BA684D008DE957 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		CA9C5BBF22BA7104008DE957 /* DetailsContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsContract.swift; sourceTree = "<group>"; };
+		CA9C5BC122BA7111008DE957 /* DetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPresenter.swift; sourceTree = "<group>"; };
+		CA9C5BC322BA7119008DE957 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		CA9C5BC522BA7123008DE957 /* DetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsInteractor.swift; sourceTree = "<group>"; };
+		CA9C5BC722BA7128008DE957 /* DetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsRouter.swift; sourceTree = "<group>"; };
 		CAF9017F229EDAE700B9B847 /* ClearScore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClearScore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAF90182229EDAE700B9B847 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAF90187229EDAE700B9B847 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -116,6 +138,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA9C5BA522BA682E008DE957 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				CA9C5BBF22BA7104008DE957 /* DetailsContract.swift */,
+				CA9C5BC122BA7111008DE957 /* DetailsPresenter.swift */,
+				CA9C5BC322BA7119008DE957 /* DetailsViewController.swift */,
+				CA9C5BC522BA7123008DE957 /* DetailsInteractor.swift */,
+				CA9C5BC722BA7128008DE957 /* DetailsRouter.swift */,
+				CA9C5BB422BA70DB008DE957 /* Dodgy Viper */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		CA9C5BB422BA70DB008DE957 /* Dodgy Viper */ = {
+			isa = PBXGroup;
+			children = (
+				CA9C5BA622BA684D008DE957 /* DetailsViewUI.swift */,
+				CA9C5BA722BA684D008DE957 /* DetailsPresenter.swift */,
+				CA9C5BA822BA684D008DE957 /* DetailsRouter.swift */,
+				CA9C5BA922BA684D008DE957 /* DetailsContracts.swift */,
+				CA9C5BAA22BA684D008DE957 /* DetailsInteractor.swift */,
+				CA9C5BAB22BA684D008DE957 /* DetailsView.swift */,
+			);
+			path = "Dodgy Viper";
+			sourceTree = "<group>";
+		};
 		CAF90176229EDAE700B9B847 = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +186,7 @@
 		CAF90181229EDAE700B9B847 /* ClearScore */ = {
 			isa = PBXGroup;
 			children = (
+				CA9C5BA522BA682E008DE957 /* Modules */,
 				CAF901CE229FEFCE00B9B847 /* Utilities */,
 				CAF901B2229EE2AE00B9B847 /* ViewControllers */,
 				CAF901B1229EE2A500B9B847 /* Models */,
@@ -351,11 +400,22 @@
 				CAF901B4229EE32600B9B847 /* CreditScoreAPI.swift in Sources */,
 				CAF901C5229F009500B9B847 /* ScoreViewController.swift in Sources */,
 				CAF901D0229FEFE400B9B847 /* Extensions.swift in Sources */,
+				CA9C5BAF22BA684D008DE957 /* DetailsRouter.swift in Sources */,
 				CAF901C7229F00D200B9B847 /* ScoreViewModel.swift in Sources */,
 				CAF901CA229F1F5500B9B847 /* ScoreDecoder.swift in Sources */,
 				CAF90183229EDAE700B9B847 /* AppDelegate.swift in Sources */,
 				CAF901B7229EE70700B9B847 /* CreditScore.swift in Sources */,
+				CA9C5BB122BA684D008DE957 /* DetailsInteractor.swift in Sources */,
+				CA9C5BAD22BA684D008DE957 /* DetailsViewUI.swift in Sources */,
+				CA9C5BC022BA7104008DE957 /* DetailsContract.swift in Sources */,
+				CA9C5BC822BA7128008DE957 /* DetailsRouter.swift in Sources */,
+				CA9C5BC422BA7119008DE957 /* DetailsViewController.swift in Sources */,
 				CA9C5BA322BA63A7008DE957 /* DetailsViewController.swift in Sources */,
+				CA9C5BC622BA7123008DE957 /* DetailsInteractor.swift in Sources */,
+				CA9C5BB222BA684D008DE957 /* DetailsView.swift in Sources */,
+				CA9C5BB022BA684D008DE957 /* DetailsContracts.swift in Sources */,
+				CA9C5BAE22BA684D008DE957 /* DetailsPresenter.swift in Sources */,
+				CA9C5BC222BA7111008DE957 /* DetailsPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
